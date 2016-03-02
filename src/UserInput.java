@@ -13,7 +13,7 @@ public class UserInput {
 
     public static int getInt (){
         System.out.print("Integer input: ");
-        return scanner.nextInt();
+        return Integer.parseInt(scanner.nextLine());
     }
 
     public static int getInt(int min, int max){
@@ -37,6 +37,7 @@ public class UserInput {
     public static char getChar(){
         System.out.print("Integer input: ");
         return scanner.next().charAt(0);
+
     }
     
     public static char getChar(char min, char max) {
@@ -63,7 +64,7 @@ public class UserInput {
     
     public static double getDouble(){
         System.out.print ("Double input: ");
-        return scanner.nextDouble();
+        return Double.parseDouble(scanner.nextLine());
     }
     
     public static double getDouble(double min, double max) {
@@ -85,6 +86,7 @@ public class UserInput {
     
     public static String getString(){
         return scanner.nextLine();
+
     }
 
     public static String getString(int min, int max){
