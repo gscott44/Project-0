@@ -20,13 +20,13 @@ public class UserInput {
         boolean userValue = true; 
         int x;
         do {
-            System.out.print("Enter an integer between " + min + " and " + max);
+            System.out.print("Enter an integer between " + min + " and " + max + ". ");
             x = getInt();
             if (x >= min && x <= max){
                 userValue = true;
             }
             else {
-                System.out.println ("Error. Input must be between " + min + " and " + " " + max); 
+                System.out.println ("Error. Input must be between " + min + " and " + " " + max + ". "); 
                 userValue = false; 
             }
         } while (!userValue); 
@@ -45,7 +45,7 @@ public class UserInput {
         boolean userValue = true;
         char x;
         do{
-            System.out.println("Please input a character between " + min + " and " + max);
+            System.out.println("Please input a character between " + min + " and " + max + ". ");
             x = getChar();
             char temp = x;
             temp = Character.toUpperCase(temp);
@@ -53,7 +53,7 @@ public class UserInput {
                 userValue = true; 
             }
             else {
-                System.out.println ("Error. Input must be between " + min + " and " + max);
+                System.out.println ("Error. Input must be between " + min + " and " + max + ". ");
                 userValue = false;
             }
         } while (!userValue);
@@ -70,13 +70,13 @@ public class UserInput {
         boolean userValue = true; 
         double x;
         do {
-            System.out.print("Enter an double value between " + min + " and " + max);
+            System.out.print("Enter an double value between " + min + " and " + max + ". ");
             x = getDouble();
             if (x >= min && x <= max){
                 userValue = true;
             }
             else {
-                System.out.println ("Error. Input must be between " + min + " and " + " " + max); 
+                System.out.println ("Error. Input must be between " + min + " and " + " " + max + ". "); 
                 userValue = false; 
             }
         } while (!userValue); 
@@ -84,7 +84,6 @@ public class UserInput {
     }
     
     public static String getString(){
-        System.out.print ("String input: ");
         return scanner.nextLine();
     }
 
@@ -92,13 +91,13 @@ public class UserInput {
         boolean userValue = true; 
         String x;
         do {
-            System.out.print("Enter an String between " + min + " and " + max + " characters.");
+            System.out.print("Enter an String between " + min + " and " + max + " characters. ");
             x = getString();
             if (x.length() >= min.length() && x.length() <= max.length()){
                 userValue = true;
             }
             else {
-                System.out.println ("Error. Input must be between " + min + " and " + " " + max + " characters"); 
+                System.out.println ("Error. Input must be between " + min + " and " + " " + max + " characters. "); 
                 userValue = false; 
             }
         } while (!userValue); 
@@ -108,6 +107,11 @@ public class UserInput {
     
   public static void main(String args[]) {
     
+      System.out.println(getInt(0, 30));
+      
+      System.out.println(getChar('a', 'z'));
+      
+      System.out.println(getDouble(0.0, 30.0));
       
     
   }
