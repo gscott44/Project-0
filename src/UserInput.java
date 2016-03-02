@@ -87,13 +87,13 @@ public class UserInput {
         return scanner.nextLine();
     }
 
-    public static String getString(String min, String max){
+    public static String getString(int min, int max){
         boolean userValue = true; 
         String x;
         do {
             System.out.print("Enter an String between " + min + " and " + max + " characters. ");
             x = getString();
-            if (x.length() >= min.length() && x.length() <= max.length()){
+            if (x.length() >= min && x.length() <= max){
                 userValue = true;
             }
             else {
@@ -113,6 +113,6 @@ public class UserInput {
       
       System.out.println(getDouble(0.0, 30.0));
       
-    
+      System.out.println(getString(0, 45));
   }
 }
