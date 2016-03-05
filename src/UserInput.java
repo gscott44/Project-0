@@ -36,7 +36,7 @@ public class UserInput {
 
     public static char getChar(){
         System.out.print("Integer input: ");
-        return scanner.next().charAt(0);
+        return scanner.nextLine().charAt(0);
 
     }
     
@@ -44,11 +44,11 @@ public class UserInput {
         min = Character.toUpperCase(min);
         max = Character.toUpperCase(max);
         boolean userValue = true;
-        char x;
+        char ch;
         do{
             System.out.println("Please input a character between " + min + " and " + max + ". ");
-            x = getChar();
-            char temp = x;
+            ch = getChar();
+            char temp = ch;
             temp = Character.toUpperCase(temp);
             if (temp >= min && temp <= max){
                 userValue = true; 
@@ -58,7 +58,7 @@ public class UserInput {
                 userValue = false;
             }
         } while (!userValue);
-        return x;
+        return ch;
 
     }
     
@@ -69,11 +69,11 @@ public class UserInput {
     
     public static double getDouble(double min, double max) {
         boolean userValue = true; 
-        double x;
+        double d;
         do {
             System.out.print("Enter an double value between " + min + " and " + max + ". ");
-            x = getDouble();
-            if (x >= min && x <= max){
+            d = getDouble();
+            if (d >= min && d <= max){
                 userValue = true;
             }
             else {
@@ -81,7 +81,7 @@ public class UserInput {
                 userValue = false; 
             }
         } while (!userValue); 
-        return x;
+        return d;
     }
     
     public static String getString(){
@@ -91,11 +91,11 @@ public class UserInput {
 
     public static String getString(int min, int max){
         boolean userValue = true; 
-        String x;
+        String s;
         do {
             System.out.print("Enter an String between " + min + " and " + max + " characters. ");
-            x = getString();
-            if (x.length() >= min && x.length() <= max){
+            s = getString();
+            if (s.length() >= min && s.length() <= max){
                 userValue = true;
             }
             else {
@@ -103,7 +103,7 @@ public class UserInput {
                 userValue = false; 
             }
         } while (!userValue); 
-        return x;
+        return s;
          
     }
     
@@ -115,6 +115,6 @@ public class UserInput {
       
       System.out.println(getDouble(0.0, 30.0));
       
-      System.out.println(getString(0, 45));
+      System.out.println(getString(0, 40));
   }
 }
